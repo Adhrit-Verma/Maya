@@ -13,8 +13,7 @@ def start_flask():
 
 if __name__ == '__main__':
     t = threading.Thread(target=start_flask)
-    t.daemon = True
     t.start()
 
-    window = webview.create_window('Maya:TS', 'http://localhost:5000',width=640,height=360)
+    window = webview.create_window('Maya:TS', 'http://localhost:5000',width=640,height=360,frameless=True,transparent=True)
     webview.start()
